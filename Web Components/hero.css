@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+body {
+  font-family: "Rubik", sans-serif;
+  color: #444;
+  line-height: 1; /*part of the global reset? to check*/
+  /* display: flex;
+  justify-content: center; */
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100vh; /*100% of the viewport - 100% of the screen size*/
+  position: relative;
+
+  background-image:
+    linear-gradient(rgb(34, 34, 34, 0.6), rgb(34, 34, 34, 0.6)), url(hero.jpg); /*creates a stack of images*/
+  background-size: cover; /*ti fill the element where the img is positioned*/
+  color: #fff;
+}
+nav {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px; /*we dont use margin, becouse it will add white space - the img will shrink*/
+}
+
+.header-container {
+  width: 1200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-container--inner {
+  width: 50%;
+}
+
+h1 {
+  font-size: 52px;
+  margin-bottom: 32px;
+  line-height: 1.05;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+.btn:link,
+.btn:visited {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #e67e22;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 9px;
+}
+
+h2 {
+  font-size: 44px;
+  margin-bottom: 48px;
+}
+
+section {
+  padding: 96px 0;
+  background-color: #f7f7f7;
+}
