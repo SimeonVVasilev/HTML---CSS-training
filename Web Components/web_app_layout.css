@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #343a40;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 250px;
+  grid-template-rows: 80px 1fr; /*first row = 80px, second row=the rest of the screen*/
+  height: 100vh; /*for "the rest of the screen to be adecuate"*/
+}
+
+nav,
+section,
+main,
+aside {
+  padding-top: 24px;
+}
+nav {
+  background-color: #343a40;
+  color: #fff;
+  grid-row: 1/-1;
+}
+
+menu {
+  display: flex;
+  background-color: #7048e8;
+  grid-column: 2/-1;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #5f3dc4;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+button:last-child {
+  background-color: #d6336c;
+  margin-left: auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow: scroll; /*check below --> must add flex-shrink:0 so this can work in flex container.*/
+
+  background-color: #e9ecef;
+  padding: 40px;
+}
+
+.email {
+  background-color: #adb5bd;
+  height: 96px;
+  display: flex; /*this is done so we can center the content in the flex elements*/
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /*use shrink so the overflow:scroll will work in flex container. Not needed outside of flex container*/
+}
+aside {
+  background-color: #e9ecef;
+}
