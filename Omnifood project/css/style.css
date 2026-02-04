@@ -51,24 +51,9 @@ body {
   color: #555; /*2*/
 }
 
-.hero {
-  max-width: 130rem; /*always use max-width*/
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 9.6rem;
-}
-
-.section-hero {
-  background-color: #fdf2e9; /*we put background-color here and not in the .hero because this way it will color all the view port.*/
-  padding: 9.6rem 0;
-}
-
-.hero-img {
-  width: 100%;
-}
-
+/******************************/
+/* GENERAL REUSABLE COMPONENTS */
+/******************************/
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -76,12 +61,6 @@ body {
   color: #333;
   letter-spacing: -0.5px;
   margin-bottom: 3.2rem;
-}
-
-.hero-description {
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
 }
 
 .btn:link,
@@ -120,6 +99,51 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important; /*for the helper class to always have highest priority*/
+}
+
+/******************************/
+/* HEADER */
+/******************************/
+
+.logo {
+  height: 2.2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  height: 9.6rem; /*for us to make the navigation sticky later*/
+  padding: 0 4.8rem;
+}
+/******************************/
+/* HERO SECTION */
+/******************************/
+
+.hero {
+  max-width: 130rem; /*always use max-width*/
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.section-hero {
+  background-color: #fdf2e9; /*we put background-color here and not in the .hero because this way it will color all the view port.*/
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
 }
 
 .delivered-meals {
